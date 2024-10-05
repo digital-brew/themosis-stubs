@@ -17550,6 +17550,101 @@ namespace Themosis\View\Extensions {
         }
     }
 }
+namespace {
+    class LocalValetDriver extends \LaravelValetDriver
+    {
+        /**
+         * Determine if the driver serves the request.
+         *
+         * @param  string  $sitePath
+         * @param  string  $siteName
+         * @param  string  $uri
+         * @return bool
+         */
+        public function serves($sitePath, $siteName, $uri)
+        {
+        }
+        /**
+         * Determine if the incoming request is for a static file.
+         *
+         * @param  string  $sitePath
+         * @param  string  $siteName
+         * @param  string  $uri
+         * @return false|string
+         */
+        public function isStaticFile($sitePath, $siteName, $uri)
+        {
+        }
+        /**
+         * Get the fully resolved path to the application's front controller.
+         *
+         * @param  string  $sitePath
+         * @param  string  $siteName
+         * @param  string  $uri
+         * @return string
+         */
+        public function frontControllerPath($sitePath, $siteName, $uri)
+        {
+        }
+    }
+    class CreateCustomersTable extends \Illuminate\Database\Migrations\Migration
+    {
+        /**
+         * Run the migrations.
+         *
+         * @return void
+         */
+        public function up()
+        {
+        }
+        /**
+         * Reverse the migrations.
+         *
+         * @return void
+         */
+        public function down()
+        {
+        }
+    }
+    class CreatePasswordResetsTable extends \Illuminate\Database\Migrations\Migration
+    {
+        /**
+         * Run the migrations.
+         *
+         * @return void
+         */
+        public function up()
+        {
+        }
+        /**
+         * Reverse the migrations.
+         *
+         * @return void
+         */
+        public function down()
+        {
+        }
+    }
+    class CreateFailedJobsTable extends \Illuminate\Database\Migrations\Migration
+    {
+        /**
+         * Run the migrations.
+         *
+         * @return void
+         */
+        public function up()
+        {
+        }
+        /**
+         * Reverse the migrations.
+         *
+         * @return void
+         */
+        public function down()
+        {
+        }
+    }
+}
 namespace App\Console {
     use Illuminate\Console\Scheduling\Schedule;
     use Themosis\Core\Console\Kernel as ConsoleKernel;
@@ -17935,7 +18030,32 @@ namespace App\Providers {
         }
     }
 }
+namespace Database\Seeders {
+    use Illuminate\Database\Seeder;
+    class DatabaseSeeder extends \Illuminate\Database\Seeder
+    {
+        /**
+         * Run the database seeds.
+         *
+         * @return void
+         */
+        public function run()
+        {
+        }
+    }
+}
+namespace Tests {
+    use PHPUnit\Framework\TestCase;
+    class SampleTest extends \PHPUnit\Framework\TestCase
+    {
+        public function testIsSuccessful()
+        {
+        }
+    }
+}
 namespace {
+    use Rector\Config\RectorConfig;
+    use RectorLaravel\Set\LaravelSetList;
     /**
      * Themosis Framework
      * WordPress Object Cache Drop-In
@@ -18749,4 +18869,24 @@ namespace {
     function web_path($path = '')
     {
     }
+    use Themosis\Core\Application;
+    use Illuminate\Support\Str;
+    use Monolog\Handler\NullHandler;
+    use Monolog\Handler\StreamHandler;
+    use Monolog\Handler\SyslogUdpHandler;
+    use Illuminate\Support\Str;
+    use Illuminate\Database\Migrations\Migration;
+    use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Support\Facades\Schema;
+    use Illuminate\Database\Migrations\Migration;
+    use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Support\Facades\Schema;
+    use Illuminate\Database\Migrations\Migration;
+    use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Support\Facades\Schema;
+    use Illuminate\Contracts\Http\Kernel;
+    use Themosis\Core\Application;
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Route;
+    use Themosis\Core\HelloDolly;
 }

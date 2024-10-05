@@ -23,7 +23,7 @@
   },
   "config": {
     "allow-plugins": {
-      "php-stubs/generator": true
+      "digital-brew/php-stubs-generator": true
     }
   },
   "scripts": {
