@@ -1,0 +1,35 @@
+{
+  "name": "digital-brew/themosis-stubs",
+  "description": "Themosis framework function and class declaration stubs for static analysis.",
+  "keywords": [
+    "themosis",
+    "wordpress",
+    "static analysis"
+  ],
+  "homepage": "https://github.com/digital-brew/themosis-stubs",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/digital-brew/php-stubs-generator"
+    }
+  ],
+  "require": {
+    "php-stubs/wordpress-stubs": "^6.0"
+  },
+  "require-dev": {
+    "php": "^8.0 || ^8.1 || ^8.2 || ^8.3",
+    "digital-brew/php-stubs-generator": "dev-master"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-stubs/generator": true
+    }
+  },
+  "scripts": {
+    "cleanup": "git status --short --ignored | sed -n -e 's#^!! ##p' | xargs -r rm -vrf"
+  },
+  "scripts-descriptions": {
+    "cleanup": "Remove all ignored files."
+  }
+}
